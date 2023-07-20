@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_entries",
+  "info": {
+    "singularName": "blog-entry",
+    "pluralName": "blog-entries",
+    "displayName": "BlogEntry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "entryID": {
+      "type": "uid",
+      "required": true
+    },
+    "date": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "entries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::bio-image.bio-image",
+      "inversedBy": "blog_entries"
+    }
+  }
+}

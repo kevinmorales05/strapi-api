@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "donations",
+  "info": {
+    "singularName": "donation",
+    "pluralName": "donations",
+    "displayName": "Donation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "string"
+    },
+    "donor_name": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "donation": {
+      "type": "decimal"
+    },
+    "donationID": {
+      "type": "uid"
+    }
+  }
+}

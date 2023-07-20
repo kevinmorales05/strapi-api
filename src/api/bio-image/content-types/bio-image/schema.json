@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bio_images",
+  "info": {
+    "singularName": "bio-image",
+    "pluralName": "bio-images",
+    "displayName": "BioImage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bio": {
+      "type": "string"
+    },
+    "img": {
+      "type": "string"
+    },
+    "bioID": {
+      "type": "uid",
+      "required": true
+    },
+    "blog_entries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blog-entry.blog-entry",
+      "mappedBy": "entries"
+    },
+    "gallery_entries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::gallery-entry.gallery-entry",
+      "mappedBy": "galleryEntries"
+    }
+  }
+}

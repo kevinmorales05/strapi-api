@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gallery_entries",
+  "info": {
+    "singularName": "gallery-entry",
+    "pluralName": "gallery-entries",
+    "displayName": "GalleryEntry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "entryID": {
+      "type": "uid",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "galleryEntries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::bio-image.bio-image",
+      "inversedBy": "gallery_entries"
+    }
+  }
+}
